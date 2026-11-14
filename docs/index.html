@@ -2,33 +2,12 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <!-- file: docs/index.html -->
-    <!--
-      PÁGINA PERSONAL — portada del portafolio
-      ──────────────────────────────────────────────────────────────
-      Si ya hiciste tu perfil en el Laboratorio 1, trae aquí su
-      contenido. Las rutas de esta página ya están ajustadas al
-      portafolio; no copies las del laboratorio, que usaban ../../
-
-      Qué editar:
-        • El <title>, el <link> a tu hoja de estilos y la descripción.
-        • Nombre, tagline y todos los marcadores con la forma {{TEXTO}}.
-        • Las cuatro rutas de la fotografía (src y srcset).
-      Qué NO cambiar:
-        • Estructura (header / aside / main / footer).
-        • El enlace "Mis entregas" (./modulos/index.html).
-        • Rutas a los logos institucionales (./assets/img/).
-
-      Nombres de archivo, si te llamas Juan Pérez:
-        assets/css/about-perez-juan.css
-        assets/img/foto-perez-juan-{160,320,480,640}.webp
-      Borra este comentario cuando termines.
-    -->
+    
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Nombre Apellidos — Perfil</title>
+    <title>José Ureña — Perfil</title>
 
     <!-- CSS específico de esta página -->
-    <link rel="stylesheet" href="./assets/css/about-apellidos-nombre.css">
+    <link rel="stylesheet" href="./assets/css/about-urena-jose.css">
 
     <!-- Descripción breve (práctica de metadatos/SEO) -->
     <meta
@@ -51,8 +30,8 @@
           </div>
 
           <!-- EDITA: nombre y tagline -->
-          <h1 class="nombre">Nombre Apellidos</h1>
-          <p class="tagline">Estudiante de Desarrollo de Software · {{GRUPO}}-{{NN}}</p>
+          <h1 class="nombre">José  Ureña</h1>
+          <p class="tagline">Estudiante de Desarrollo de Software · 4GS121-14</p>
         </div>
 
         <!-- Logos institucionales (no cambiar rutas) -->
@@ -72,15 +51,15 @@
       <aside class="sidebar">
         <figure class="perfil">
           <img
-            src="./assets/img/foto-apellidos-nombre-480.webp"
+            src="./assets/img/foto-urena-jose-480.webp"
             srcset="
-              ./assets/img/foto-apellidos-nombre-160.webp 160w,
-              ./assets/img/foto-apellidos-nombre-320.webp 320w,
-              ./assets/img/foto-apellidos-nombre-480.webp 480w,
-              ./assets/img/foto-apellidos-nombre-640.webp 640w
+              ./assets/img/foto-urena-jose-160.webp 160w,
+              ./assets/img/foto-urena-jose-320.webp 320w,
+              ./assets/img/foto-urena-jose-480.webp 480w,
+              ./assets/img/foto-urena-jose-640.webp 640w
             "
             sizes="(max-width: 700px) 128px, 160px"
-            alt="Nombre Apellidos, estudiante de LDGS UTP FISC Veraguas"
+            alt="José Ureña, estudiante de LDGS UTP FISC Veraguas"
             width="160"
             height="160"
             loading="lazy"
@@ -94,13 +73,13 @@
           <h2>Contacto</h2>
           <ul class="lista-contacto">
             <li>
-              <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+              <a href="mailto:jose.urena5@utp.ac.pa">jose.urena5@utp.ac.pa</a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="{{LINKEDIN}}">LinkedIn</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jose-ureña-883991442/">LinkedIn</a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="{{GITHUB}}">GitHub</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/jose-urena-utp">GitHub</a>
             </li>
             <li>
               <a href="./modulos/index.html">Mis entregas del curso</a>
@@ -115,36 +94,28 @@
           <h3>Lenguajes</h3>
           <div class="chips">
             <span class="chip">Java</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">Python</span>
-            <span class="chip">SQL</span>
-          </div>
-
-          <h3>Frameworks & Librerías</h3>
-          <div class="chips">
-            <span class="chip">Spring Boot</span>
-            <span class="chip">React</span>
-            <span class="chip">Node.js</span>
+            <span class="chip">C++</span>
+            <span class="chip">C#</span>
           </div>
 
           <h3>Bases de datos</h3>
           <div class="chips">
             <span class="chip">MySQL</span>
-            <span class="chip">PostgreSQL</span>
+            <span class="chip">MariaDB</span>
           </div>
 
           <h3>Herramientas</h3>
           <div class="chips">
             <span class="chip">Git</span>
-            <span class="chip">Docker</span>
-            <span class="chip">Postman</span>
+            <span class="chip">Visual Studio</span>
+            <span class="chip">VS Code</span>
             <span class="chip">Figma</span>
           </div>
 
           <h3>Metodologías</h3>
           <div class="chips">
-            <span class="chip">Scrum</span>
-            <span class="chip">Kanban</span>
+            <span class="chip">Scrum (Teorico)</span>
+            <span class="chip">Metodología Espiral (Teorico)</span>
           </div>
         </section>
       </aside>
@@ -153,7 +124,14 @@
       <main class="contenido">
         <section class="resumen card">
           <h2>Acerca de mí</h2>
-          <p>{{RESUMEN_BREVE_ELEVATOR_PITCH}}</p>
+          <p>Soy estudiante de la Licenciatura en Desarrollo y Gestión de Software 
+            con pasión por descubrir y construir soluciones tecnológicas eficientes, escalables 
+            y centradas en el usuario. Me enfoco en el desarrollo de software. 
+            Actualmente domino tecnologías como (Java, C++, C#) y bases de datos 
+            (MySQL, MariaDB). 
+            Busco mi primera oportunidad laboral o prácticas profesionales para 
+            aportar valor a un equipo de desarrollo mientras sigo expandiendo 
+            mis habilidades técnicas.</p>
         </section>
 
         <!-- Duplica <article.proyecto> por cada proyecto -->
@@ -162,15 +140,11 @@
           <div class="proyectos-flex">
             <article class="proyecto">
               <header class="proyecto-head">
-                <h3>{{NOMBRE_PROYECTO}}</h3>
-                <div class="proyecto-links">
-                  <a target="_blank" rel="noopener noreferrer" href="{{URL_GITHUB}}">Código</a>
-                  <a target="_blank" rel="noopener noreferrer" href="{{URL_DEMO}}">Demo</a>
-                </div>
+                <h3>Interfaz de App para Hacer Ejercicios</h3>
               </header>
-              <p>{{DESCRIPCION_PROYECTO}}</p>
-              <p class="rol"><strong>Rol:</strong> {{ROL}}</p>
-              <p class="tech"><strong>Tecnologías:</strong> {{TECNOLOGIAS}}</p>
+              <p>Realización de la interfaz de una aplicación para hacer ejercicio, enfocada en la experiencia del usuario y la funcionalidad.</p>
+              <p class="rol"><strong>Rol:</strong> Desarrollador Frontend</p>
+              <p class="tech"><strong>Tecnologías:</strong> Figma</p>
             </article>
           </div>
         </section>
@@ -180,9 +154,8 @@
           <ul class="timeline">
             <li>
               <div class="item">
-                <h3>{{CARGO}} — {{ORGANIZACION}}</h3>
-                <span class="meta">{{FECHA}}</span>
-                <p>{{RESPONSABILIDADES_LOGROS}}</p>
+                <h3>Sin experiencia</h3>
+                <p>Actualmente no cuento con experiencia laboral formal, pero estoy ansioso por aprender y contribuir en un entorno profesional.</p>
               </div>
             </li>
           </ul>
@@ -193,7 +166,7 @@
           <ul class="listado-simple">
             <li>
               <strong>Licenciatura en Desarrollo y Gestión de Software</strong>
-              — UTP, Centro Regional de Veraguas ({{ANIO_INICIO}}–{{ANIO_FIN}})
+              — UTP, Centro Regional de Veraguas (2025–2029, actualmente cursando)
             </li>
           </ul>
         </section>
@@ -201,15 +174,25 @@
         <section class="certificaciones card">
           <h2>Certificaciones y Cursos</h2>
           <ul class="listado-simple">
-            <li>{{CERTIFICACION_1}}</li>
-            <li>{{CURSO_1}}</li>
+            <li>Certificado de Participación en el Hackathon Copa Airlanes (2026)</li>
           </ul>
         </section>
 
         <section class="extra card">
           <h2>Logros · Artículos · Intereses</h2>
           <ul class="listado-simple">
-            <li>{{LOGRO_O_ARTICULO}}</li>
+            <li>Participación:
+              <ul>
+                <li>Hackaton Copa Airlanes (2026)</li>
+              </ul>
+            </li>
+            Intereses:
+            <ul>
+              <li>Desarrollo de aplicaciones móviles</li>
+              <li>Inteligencia Artificial</li>
+              <li>Desarrollo Web</li>
+              <li>Aprendizaje Automático</li>
+              <li>Desarrollo de Videojuegos</li>
           </ul>
         </section>
       </main>
