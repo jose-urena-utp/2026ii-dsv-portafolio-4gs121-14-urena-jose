@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                script-src 'self';
+                style-src 'self' https://fonts.googleapis.com;
+                font-src https://fonts.gstatic.com;
+                img-src 'self';
+                media-src 'self';
+                object-src 'self';
+                frame-src 'self' https://www.openstreetmap.org;
+                base-uri 'self';
+                form-action 'self'">
+                
+    <meta name="description"
+            content="Tarifas de servicios, horario de atención y precios por especie 
+            de la Clínica Veterinaria ConSentidos.">
+    <meta name="author" content="José Ureña">
+
+    <title>Tarifas | Clínica Veterinaria ConSentidos</title>
+
+    <link rel="icon" href="assets/img/logo-consentidos.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="assets/css/consentidos.css">
+</head>
+
+<body>
+    <a href="#contenido">Saltar al contenido</a>
+
+    <header id="inicio">
+        <img src="assets/img/logo-consentidos.svg" alt="" width="64" height="64">
+
+        <hgroup>
+            <h1>Tarifas y horarios</h1>
+            <p>Clínica Veterinaria ConSentidos</p>
+        </hgroup>
+
+        <!-- Mis datos: siempre arriba, nunca en el pie-->
+        <p>
+            José Ureña<br>
+            4GS121-14<br>
+        </p>
+    </header>
+
+    <nav aria-label="Secciones de esta página">
+        <h2>El sitio</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="componentes.html">Guía de componentes</a></li>
+            <li><a href="tarifas.html">Tarifas</a></li>
+            <li><a href="cita.html">Solicitar cita</a></li>
+            <li><a href="paginas/test.html">Página de prueba</a></li>
+        </ul>
+    </nav>
+        
+    <main id="contenido">
+
+        <section id="tarifas">
+            <p>Los precios incluyen la consulta y el informe escrito. Las urgencias fuera del horario tienen un recargo del 50 %.</p>
+
+            <h2>Tarifarios de servicios</h2>
+            <p id="nota-tarifario">
+                Precios en balboas, vigentes hasta diciembre de 2026.
+            </p>
+
+            <div tabindex="0" role="region" aria-labelledby="cap-tarifario">
+                <table aria-describedby="nota-tarifario">
+                    <caption id="cap-tarifario">Tarifas de servicios 2026</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Servicio</th>
+                            <th scope="col">Perro</th>
+                            <th scope="col">Gato</th>
+                            <th scope="col">Duración</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">Consulta general</th>
+                            <td>B/. 25.00</td>
+                            <td>B/. 22.00</td>
+                            <td>30 minutos</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Vacunación</th>
+                            <td>B/. 18.00</td>
+                            <td>B/. 16.00</td>
+                            <td>15 minutos</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Desparasitación</th>
+                            <td>B/. 12.00</td>
+                            <td>B/. 10.00</td>
+                            <td>15 minutos</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Corte de uñas</th>
+                            <td>B/. 8.00</td>
+                            <td>B/. 8.00</td>
+                            <td>10 minutos</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <th scope="row">Servicios listados</th>
+                            <td colspan="3">4</td>
+                        </tr>
+                    </tfoot>
+                    
+                </table>
+            </div>
+        </section>
+     
+        <section id="horario">
+            <h2>Horario de los veterinarios</h2>
+
+            <p id="nota-horarios">
+                Conoce a nuestro veterinarios.
+            </p>
+
+            <div tabindex="0" role="region" aria-labelledby="cap-horario">
+                <table aria-describedby="nota-horarios">
+                    <caption id="cap-horario">Veterinarios de turno por jornada</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Jornada</th>
+                            <th scope="col">Lunes a jueves</th>
+                            <th scope="col">Viernes</th>
+                            <th scope="col">Sábado</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">Mañana</th>
+                            <td>Dra. Ortega</td>
+                            <td>Dra. Ortega</td>
+                            <td rowspan="2">Dr. Sanjur</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tarde</th>
+                            <td colspan="2">Dr. Sanjur</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Urgencias</th>
+                            <td colspan="3">Turno rotativo, por teléfono</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section id="tarifa-especies">
+            <h2>Tarifas por especies y tipo de consulta</h2>
+
+            <p id="nota-tarifas-especies">
+                Conoce nuestros tipos de consultas por especies.
+            </p>
+
+            <div tabindex="0" role="region" aria-labelledby="cap-tarifas-especies">
+                <table aria-describedby="nota-tarifa-especies">
+                    <caption id="cap-tarifas-especies">Tarifas por especies y tipo de consulta</caption>
+
+                    <colgroup>
+                        <col>
+                        <col span="2">
+                        <col span="2">
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                            <th id="h-servicio" scope="col" rowspan="2">Servicio</th>
+                            <th id="h-perro" scope="colgroup" colspan="2">Perro</th>
+                            <th id="h-gato" scope="colgroup" colspan="2">Gato</th>
+                        </tr>
+
+                        <tr>
+                            <th id="h-perro-regular" scope="col">Regular</th>
+                            <th id="h-perro-urgencia" scope="col">Urgencia</th>
+                            <th id="h-gato-regular" scope="col">Regular</th>
+                            <th id="h-gato-urgencia" scope="col">Urgencia</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th id="s-consulta" scope="row">Consultas</th>
+                            <td headers="s-consulta h-perro h-perro-regular">B/. 25.00</td>
+                            <td headers="s-consulta h-perro h-perro-urgencia">B/. 40.00</td>
+                            <td headers="s-consulta h-gato h-gato-regular">B/. 22.00</td>
+                            <td headers="s-consulta h-gato h-gato-urgencia">B/. 36.00</td>
+                        </tr>
+                        <tr>
+                            <th id="s-vacunación" scope="row">Vacunación</th>
+                            <td headers="s-vacunación h-perro h-perro-regular">B/. 18.00</td>
+                            <td headers="s-vacunación h-perro h-perro-urgencia">B/. 30.00</td>
+                            <td headers="s-vacunación h-gato h-gato-regular">B/. 15.00</td>
+                            <td headers="s-vacunación h-gato h-gato-urgencia">B/. 28.00</td>
+                        </tr>
+                        <tr>
+                            <th id="s-cirugía" scope="row">Cirugía</th>
+                            <td headers="s-cirugía h-perro h-perro-regular">B/. 85.00</td>
+                            <td headers="s-cirugía h-perro h-perro-urgencia">B/. 120.00</td>
+                            <td headers="s-cirugía h-gato h-gato-regular">B/. 76.00</td>
+                            <td headers="s-cirugía h-gato h-gato-urgencia">B/. 110.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <aside>
+        <h2>Horario de atención</h2>
+        <p>
+            Lunes a viernes: 8:00 a.m. a 6:00 p.m.<br>
+            Sábados: 8:00 a.m. a 12:00 m.<br>
+            Urgencias: las 24 horas por teléfono.
+        </p>
+    </aside>
+
+    <footer>
+        <address>
+            <strong>Clínica Veterinaria ConSentidos</strong><br>
+            Avenida Central, Santiago de Veraguas, Panamá<br>
+            <a href="tel:+5079980000">+507 998-0000</a>
+            <a href="mailto:citas@consentidos.example">citas@consentidos.example</a>
+        </address>
+
+        <p>
+            Ultima actualización:
+            <time datetime="2026-10-22">15 de noviembre de 2026</time>.
+        </p>
+
+        <p><a href="#inicio">Volver arriba</a></p>
+
+        <p>
+            <small>
+                &copy; 2026 Clínica Veterinaria ConSentidos. Proyecto académico del 
+                curso Desarrollo de Software V, Universidad Tecnológica de Panamá,
+                Centro Regional de Veraguas. 
+            </small>
+        </p>
+    </footer>
+</body>
+
+</html> 
+
+
+

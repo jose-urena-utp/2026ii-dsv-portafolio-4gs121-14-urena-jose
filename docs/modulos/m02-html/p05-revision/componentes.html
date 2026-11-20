@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                script-src 'self';
+                style-src 'self' https://fonts.googleapis.com;
+                font-src https://fonts.gstatic.com;
+                img-src 'self';
+                media-src 'self';
+                object-src 'self';
+                frame-src 'self' https://www.openstreetmap.org;
+                base-uri 'self';
+                form-action 'self'">
+
+    <meta name="description"
+            content="Pagina de referencia que reune todos los componentes 
+            que utiliza el sitio de la Clinica Veterinaria ConSentidos">
+    <meta name="author" content="José Ureña">
+
+    <title>Página de componentes | Clínica Veterinaria ConSentidos</title>
+
+    <link rel="icon" href="assets/img/logo-consentidos.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="assets/css/consentidos.css">
+
+    <!-- Para los botones -->
+    <script src="assets/js/componentes.js" defer></script>
+</head>
+
+<body>
+    <a href="#contenido">Saltar al contenido</a>
+
+    <header id="inicio">
+        <img src="assets/img/logo-consentidos.svg" alt="" width="64" height="64">
+
+        <hgroup>
+            <h1>Guía de componentes</h1>
+            <p>Clínica Veterinaria ConSentidos</p>
+        </hgroup>
+
+        <!-- Mis datos: siempre arriba, nunca en el pie-->
+        <p>
+            José Ureña<br>
+            4GS121-14<br>
+        </p>
+    </header>
+
+    <nav aria-label="Secciones de esta página">
+        <h2>El sitio</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="componentes.html">Guía de componentes</a></li>
+            <li><a href="tarifas.html">Tarifas</a></li>
+            <li><a href="cita.html">Solicitar cita</a></li>
+            <li><a href="paginas/test.html">Página de prueba</a></li>
+        </ul>
+
+        <h2>Componentes</h2>
+        <ul>
+            <li>
+                <strong>Texto</strong>
+                <ul>
+                    <li><a href="#encabezados">Encabezados</a></li>
+                    <li><a href="#parrafos">Párrafo y salto de línea</a></li>
+                    <li><a href="#enfasis">Énfasis</a></li>
+                    <li><a href="#codigo">Código</a></li>
+                    <li><a href="#fecha-horas">Fecha y hora</a></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Listas</strong>
+                <ul>
+                    <li><a href="#listas-ordenadas">Lista ordenada</a></li>
+                    <li><a href="#listas-no-ordenadas">Lista no ordenada</a></li>
+                    <li><a href="#listas-descripcion">Lista de descripción</a></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Enlaces</strong>
+                <ul>
+                    <li><a href="#enlaces-internos">Otra página del sitio</a></li>
+                    <li><a href="#enlaces-externos">Sitio de terceros</a></li>
+                    <li><a href="#enlaces-descargas">Descarga</a></li>
+                    <li><a href="#enlaces-contacto">Correo y teléfono</a></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Multimedia e incrustados</strong>
+                <ul>
+                    <li><a href="#imagenes">Imágenes</a></li>
+                    <li><a href="#audio">Audio</a></li>
+                    <li><a href="#video">Video</a></li>
+                    <li><a href="#iframe-propio">Marco propio</a></li>
+                    <li><a href="#iframe-terceros">Marco de terceros</a></li>
+                    <li><a href="#objeto-incrustado">Documento PDF</a></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Interactivos</strong>
+                <ul>
+                    <li><a href="#acordeon">Preguntas frecuentes</a></li>
+                    <li><a href="#medidor">Medidor</a></li>
+                    <li><a href="#progreso">Barra de progreso</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+        
+    <main id="contenido">
+            <p>Esta página reúne los elementos HTML que utiliza el sitio. De cada uno se
+                muestra como se ve, su código y, cuanto hace falta, una nota.
+            </p>
+
+            <section id="texto">
+                <h2>Texto</h2>
+                
+                <article id="encabezados">
+                    <h3>Encabezados <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></h3>
+                    <p>Estructuran el contenido en niveles jerárquicos para organizar el índice y facilitar la lectura..</p>
+
+                    <div class="demo">
+                        <h4>Encabezado de nivel 4</h4>
+                        <h5>Encabezado de nivel 5</h5>
+                        <h6>Encabezado de nivel 6</h6>
+                    </div>
+
+                    <pre><code>&lt;h4&gt;Encabezado de nivel 4&lt;/h4&gt;
+&lt;h5&gt;Encabezado de nivel 5&lt;/h5&gt;
+&lt;h6&gt;Encabezado de nivel 6&lt;/h6&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> No saltes niveles para conseguir un tamaño de letra; 
+                            el tamaño lo decide el CSS. Los lectores de pantalla usan los encabezados para navegar.</p>
+                    </aside>
+
+                </article>
+
+                <article id="parrafos">
+                    <h3>Párrafos<code>&lt;p&gt;</code> y salto de línea<code>&lt;br&gt;</code></h3>
+                    <p>Los párrafos son bloques de texto que se separan con un espacio en blanco. 
+                        Se usan para organizar el contenido y facilitar la lectura.</p>
+
+                    <div class="demo">
+                        <p>Clinica Veterinaria ConSentidos</p>
+
+                        <p>
+                            Lunes a viernes: 8:00 a.m. a 6:00 p.m.<br>
+                            Sábados: 8:00 a.m. a 12:00 m.<br>
+                            Urgencias: las 24 horas por teléfono.
+                        </p>
+                    </div>
+
+                    <pre><code>&lt;p&gt;Clinica Veterinaria ConSentidos.&lt;/p&gt;
+
+&lt;p&gt;Lunes a viernes: 8:00 a.m. a 6:00 p.m.&lt;/br&gt;
+&lt;p&gt;Sábados: 8:00 a.m. a 12:00 m.&lt;/br&gt;
+&lt;p&gt;Urgencias: las 24 horas por teléfono.&lt;/p&gt;</code></pre>
+                    
+                    <aside>
+                        <p><strong>Buena práctica</strong>: no uses varios &lt;br&gt; seguidos para separar los bloques; separa con 
+                            párrafos y deja el espacio al CSS.</p>
+                    </aside>
+
+                </article>
+
+                <article id="enfasis">
+                    <h3>Énfasis en el texto <code>&lt;em&gt;</code> y fuerte <code>&lt;strong&gt;</code> y resaltado <code>&lt;mark&gt;</code></h3>
+                    <p>El énfasis se usa para dar importancia a ciertos fragmentos de texto.</p>
+
+                    <div class="demo">
+                        <p>
+                            La vácuna antirrábica es <strong>obligatoria</strong> cada año. El resto
+                            del plan depende de la edad y de si la mascota sale a la calle. Si llegas
+                            con retraso de más de un mes, el plan <em>sí</em> se reinicia: no es un 
+                            trámite, es lo que hace que la vacuna proteja.
+                        </p>
+                    </div>
+
+                    <pre><code>&lt;p&gt;
+La vácuna antirrábica es &lt;strong&gt;obligatoria&lt;/strong&gt; cada año. El resto
+del plan depende de la edad y de si la mascota sale a la calle. Si llegas
+con retraso de más de un mes, el plan &lt;em&gt;sí&lt;/em&gt; se reinicia: no es un 
+trámite, es lo que hace que la vacuna proteja.&lt;/p&gt;</code></pre>
+                    
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Usa <code>&lt;strong&gt;</code> para indicar importancia seria o urgencia
+                        y <code>&lt;em&gt;</code> para cambiar el énfasis de la oración. No los uses solo para cambiar el aspecto visual</p>
+                    </aside>
+
+                </article>
+
+                <article id="codigo">
+                    <h3>Código <code>&lt;code&gt;</code> y texto preformateado <code>&lt;pre&gt;</code></h3>
+                    <p>La etiqueta <code>&lt;code&gt;</code> marca fragmentos cortos de código en línea dentro de un párrafo, mientras que <code>&lt;pre&gt;</code> conserva exactamente los espacios, tabulaciones y saltos de línea del texto tal como fueron escritos.</p>
+
+                    <div class="demo">
+                        <p>Para programar una cita, envía el parámetro <code>servicio=consulta</code> en la solicitud.</p>
+
+                        <pre><code>&lt;p&gt;Clínica Veterinaria ConSentidos.&lt;/p&gt;
+Lunes a viernes: 8:00 a.m. a 6:00 p.m.&lt;br&gt;
+Sábados: 8:00 a.m. a 12:00 m.&lt;br&gt;
+Urgencias: las 24 horas por teléfono.</code></pre>
+                    </div>
+
+                    <pre><code>&lt;p&gt;Para programar una cita, envía el parámetro &lt;code&gt;servicio=consulta&lt;/code&gt;
+en la solicitud.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Clínica Veterinaria ConSentidos.&amp;lt;/p&amp;gt;
+    Lunes a viernes: 8:00 a.m. a 6:00 p.m.&amp;lt;br&amp;gt;
+    Sábados: 8:00 a.m. a 12:00 m.&amp;lt;br&amp;gt;
+    Urgencias: las 24 horas por teléfono.&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Para mostrar bloques de código de varias líneas, anida siempre <code>&lt;code&gt;</code> dentro 
+                            de <code>&lt;pre&gt;</code> y escapa los símbolos <code>&lt;</code> como <code>&amp;lt;</code> y <code>&gt;</code> como
+                            <code>&amp;gt;</code> para que el navegador los muestre como texto y no los ejecute como etiquetas HTML.
+                        </p>
+                    </aside>
+                </article>
+
+                <article id="fecha-horas">
+                    <h3>Fechas y horas <code>&lt;time&gt;</code></h3>
+                    <p>Representa un periodo específico en el tiempo o una fecha en un formato legible tanto para humanos como para navegadores y buscadores mediante el atributo <code>datetime</code>.</p>
+
+                    <div class="demo">
+                        <p>Última actualización:
+                            <time datetime="2026-10-22">15 de noviembre de 2026</time>.
+                        </p>
+                    </div>
+
+                    <pre><code>&lt;p&gt;
+    Última actualización:
+    &lt;time datetime="2026-10-22"&gt;15 de noviembre de 2026&lt;/time&gt;.
+&lt;/p&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Incluye siempre el atributo <code>datetime</code> con el formato estándar internacional (<code>AAAA-MM-DD</code>) y asegúrate de que coincida exactamente con la fecha visible en el texto.</p>
+                    </aside>
+                </article> 
+
+            </section>
+
+            <section id="listas">
+                <h2>Listas</h2>
+
+                <article id="listas-ordenadas">
+                    <h3>Listas ordenadas <code>&lt;ol&gt;</code></h3>
+                    <p>Organizan elementos en una secuencia numérica o secuencial donde el orden importa.</p>
+
+                    <div class="demo">
+                        <ol>
+                            <li>Registro en recepción y revisión del carné. </li>
+                            <li>
+                                Triaje
+                                <ol type="a">
+                                    <li>Peso en báscula.</li>
+                                    <li>Temperatura.</li>
+                                </ol>
+                            </li>
+                            <li>Consulta con el veterinario.</li>
+                            <li>Indicaciones por escrito y próxima cita.</li>
+                        </ol>   
+                    </div>
+
+                    <pre><code>&lt;ol&gt;
+    &lt;li&gt;Registro en recepción y revisión del carné. &lt;/li&gt;
+        &lt;li&gt;
+            Triaje
+            &lt;ol type="a"&gt;
+                &lt;li&gt;Peso en báscula.&lt;/li&gt;
+                &lt;li&gt;Temperatura.&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Consulta con el veterinario.&lt;/li&gt;
+    &lt;li&gt;Indicaciones por escrito y próxima cita.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Utiliza listas ordenadas (<code>&lt;ol&gt;</code>) exclusivamente 
+                            cuando la secuencia o el orden de los pasos altere el resultado (como los protocolos clínicos). 
+                            Para sub-niveles, puedes emplear el atributo <code>type</code> o CSS para variar el estilo 
+                            de numeración sin romper la jerarquía.</p>
+                    </aside>
+
+                </article>
+
+                <article id="listas-no-ordenadas">
+                    <h3>Listas no ordenadas <code>&lt;ul&gt;</code></h3>
+                    <p>Organizan elementos sin un orden específico, donde el orden no es importante.</p>
+
+                    <div class="demo">
+                        <ul>
+                            <li><a>Inicio</a></li>
+                            <li><a>Servicios</a></li>
+                            <li><a>Guía de componentes</a></li>
+                            <li><a>Página de prueba</a></li>
+                        </ul>
+                    </div>
+
+                    <pre><code>&lt;ul&gt;
+    &lt;li&gt;&lt;a href="URL.example"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="URL.example"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="URL.example"&gt;Guía de componentes&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="URL.example"&gt;Página de prueba&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Utiliza listas no ordenadas (<code>&lt;ul&gt;</code>) exclusivamente 
+                            cuando el orden de los elementos no sea relevante (como las características de un producto). 
+                            Para sub-niveles, puedes emplear el atributo <code>type</code> o CSS para variar el estilo 
+                            de numeración sin romper la jerarquía.</p>
+                    </aside>
+
+                </article>
+
+                <article id="listas-descripcion">
+                    <h3>Listas de descripción <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> y <code>&lt;dd&gt;</code></h3>
+                    <p>Crean glosarios o pares de clave y valor. La etiqueta <code>&lt;dl&gt;</code> abre la lista, 
+                        <code>&lt;dt&gt;</code> define el término y <code>&lt;dd&gt;</code> aporta su descripción.
+                    </p>
+
+                    <div class="demo">
+                        <dl>
+                            <dt>Desparasitación</dt>
+                            <dd>Tratamiento que elimina parásitos internos y externos.</dd>
+
+                            <dt>Microchip</dt>
+                            <dd>Dispositivo del tamaño de un grano de arroz, con un código que 
+                                identifica a la mascota si se pierde.
+                            </dd>
+
+                            <dt>Triaje</dt>
+                            <dd>Revisión inicial que determina la urgencia de la atención.</dd>
+                        </dl>
+                    </div>
+
+                    <pre><code>&lt;dl&gt;
+    &lt;dt&gt;Desparasitación&lt;/dt&gt;
+        &lt;dd&gt;Tratamiento que elimina parásitos internos y externos.&lt;/dd&gt;
+
+    &lt;dt&gt;Microchip&lt;/dt&gt;
+        &lt;dd&gt;Dispositivo del tamaño de un grano de arroz, con un código que 
+            identifica a la mascota si se pierde.
+        &lt;/dd&gt;
+
+    &lt;dt&gt;Triaje&lt;/dt&gt;
+        &lt;dd&gt;Revisión inicial que determina la urgencia de la atención.&lt;/dd&gt;
+&lt;dl&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Utiliza el elemento <code>&lt;dl&gt;</code> específicamente para agrupaciones de 
+                            términos y descripciones, como glosarios, metadatos o pares de clave-valor. Evita usarlo para maquetar listas de 
+                            elementos simples o columnas visuales cuyo contenido no guarde una relación conceptual de definición.</p>
+                    </aside>
+
+                </article>
+
+            </section>
+
+            <section id="enlaces">
+                <h2>Enlaces</h2>
+
+                <article id="enlaces-internos">
+                    <h3>Enlaces internos<code>&lt;a&gt;</code></h3>
+                    <p>Los enlaces se crean con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> para especificar la 
+                        dirección del enlace.
+                    </p>
+
+                    <div class="demo">
+                        <a>
+                            <ul>    
+                                <li>Inicio</li> 
+                            </ul>
+                        </a>.
+                    </div>
+
+                    <pre><code>&lt;li&gt;&lt;a href="index.html"&gt;Inicio&lt;/a&gt;&lt;/li&gt;</code></pre>
+                    
+                    <aside>
+                            <p><strong>Buena práctica:</strong> Escribe siempre textos de enlace descriptivos que indiquen claramente 
+                                el destino (evita textos genéricos como "haz clic aquí" o "leer más").
+                            </p>
+                    </aside>
+
+                </article>
+
+                <article id="enlaces-externos">
+                    <h3>Enlaces externos<code>&lt;a&gt;</code></h3>
+                    <p>Los enlaces se crean con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> para especificar la 
+                        dirección del enlace.
+                    </p>
+
+                    <div class="demo">
+                        <a>
+                            Ministerio de Desarrollo Agropecuario
+                        </a>.
+                    </div>
+
+                    <pre><code>&lt;a href="https://www.mida.gob.pa" target="_blank" rel="noopener noreferrer"&gt;
+    Ministerio de Desarrollo Agropecuario
+&lt;/a&gt;</code></pre>
+                    
+                    <aside>
+                            <p><strong>Buena práctica:</strong> Escribe siempre textos de enlace descriptivos que indiquen claramente 
+                                el destino (evita textos genéricos como "haz clic aquí" o "leer más"). Para enlaces externos que se 
+                                abren en una pestaña nueva con <code>target="_blank"</code>, agrega siempre <code>rel="noopener noreferrer"</code> 
+                                por seguridad, y usa enlaces internos con <code>#id</code> para facilitar la navegación rápida.
+                            </p>
+                    </aside>
+
+                </article>
+
+                <article id="enlaces-descargas">
+                    <h3>Enlaces de descarga<code>&lt;a download&gt;</code></h3>
+                    <p>Los enlaces se crean con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> para especificar la 
+                        dirección del enlace.
+                    </p>
+
+                    <div class="demo">
+                        <a>
+                            Descargar la guía de vacunación (PDF)
+                        </a>
+                    </div>
+
+                    <pre><code>&lt;a href="assets/docs/guia-vacunacion.pdf" download&gt;
+    Descargar la guía de vacunación (PDF)
+&lt;/a&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Indica siempre en el texto del enlace el formato y, de ser posible, 
+                            el peso del archivo (por ejemplo, <code>(PDF)</code>) para que el usuario sepa qué va a descargar. 
+                            Ten en cuenta que el atributo <code>download</code> solo funciona con archivos del mismo origen 
+                            (tu propio servidor) y permite sugerir un nombre de archivo personalizado si se le asigna un valor, 
+                            como <code>download="guia.pdf"</code>.</p>
+                    </aside>
+
+                </article>
+
+                <article id="enlaces-contacto">
+                    <h3>Enlaces de contacto <code>mailto:</code> y <code>tel:</code></h3>
+                    <p>Los enlaces de contacto se crean con la etiqueta <code>&lt;a&gt;</code> y los atributos <code>href</code> con los prefijos <code>mailto:</code> para correos electrónicos y <code>tel:</code> para números de teléfono.</p>
+
+                    <div class="demo">
+                        <a>info@ejemplo.com</a><br>
+                        <a>+34 911 23 45 67</a>
+                    </div>
+
+                    <pre><code>&lt;a href="mailto:info@ejemplo.com"&gt;info@ejemplo.com&lt;/a&gt;
+&lt;a href="tel:+34911234567"&gt;+34 911 23 45 67&lt;/a&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Utiliza los prefijos <code>mailto:</code> y <code>tel:</code> para crear enlaces de contacto que permitan a los usuarios enviar correos electrónicos o llamar por teléfono con un solo clic.</p>
+                    </aside>
+
+                </article>
+
+            </section>
+
+            <section id="multimedia">
+                <h2>Imágenes y multimedia</h2>
+
+                <article id="imagenes">
+                    <h3>Imágenes <code>&lt;img&gt;</code> y <code>&lt;figure&gt;</code></h3>
+                    <p>La etiqueta <code>&lt;img&gt;</code> inserta imágenes en la página, mientras que <code>&lt;figure&gt;</code> y <code>&lt;figcaption&gt;</code> permiten acompañarlas con una leyenda explicativa.</p>
+
+                    <div class="demo">
+                        <img src="assets/img/logo-consentidos.svg" alt="Logo de la Clínica Veterinaria ConSentidos" width="64" height="64">
+
+                        <figure>
+                            <img src="assets/img/luna.svg"
+                                alt="Ilustración de Luna, una gata gris atigrada, sentada"
+                                width="320" height="240" loading="lazy">
+                            <figcaption>Luna, paciente del mes.</figcaption>
+                        </figure>
+                    </div>
+
+                    <pre><code>&lt;img src="assets/img/logo-consentidos.svg" alt="Logo de la Clínica Veterinaria ConSentidos" width="64" height="64"&gt;
+
+&lt;figure&gt;
+    &lt;img src="assets/img/luna.svg"
+         alt="Ilustración de Luna, una gata gris atigrada, sentada"
+         width="320" height="240" loading="lazy"&gt;
+    &lt;figcaption&gt;Luna, paciente del mes.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Incluye siempre <code>alt</code> para describir la imagen sin repetir el texto de <code>&lt;figcaption&gt;</code>, especifica <code>width</code> y <code>height</code> para evitar saltos en el diseño, y usa <code>loading="lazy"</code> para diferir la descarga de imágenes fuera de pantalla.</p>
+                    </aside>
+
+                </article>
+                
+
+                <article id="audio">
+                    <h3>Audio <code>&lt;audio&gt;</code></h3>
+                    <p>Permite incrustar contenido de sonido en el documento con controles de reproducción nativos y fuentes alternativas.</p>
+
+                    <div class="demo">
+                        <p id="etq-audio">Tono de recordatorio de citas:</p>
+                        <audio controls preload="metadata" aria-labelledby="etq-audio">
+                            <source src="assets/media/recordatorio.mp3" type="audio/mpeg">
+                            Tu navegador no reproduce audio.
+                            <a href="assets/media/recordatorio.mp3">Descarga el tono</a>.
+                        </audio>
+                    </div>
+
+    <pre><code>&lt;p id="etq-audio"&gt;Tono de recordatorio de citas:&lt;/p&gt;
+&lt;audio controls preload="metadata" aria-labelledby="etq-audio"&gt;
+    &lt;source src="assets/media/recordatorio.mp3" type="audio/mpeg"&gt;
+    Tu navegador no reproduce audio.
+    &lt;a href="assets/media/recordatorio.mp3"&gt;Descarga el tono&lt;/a&gt;.
+&lt;/audio&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Usa <code>preload="metadata"</code> para cargar solo la duración y datos básicos
+                             sin consumir ancho de banda innecesario, vincula una etiqueta descriptiva con <code>aria-labelledby</code> y 
+                             ofrece siempre un enlace de descarga de respaldo dentro de <code>&lt;audio&gt;</code>.</p>
+                    </aside>
+
+                </article>
+
+                <article id="video">
+                    <h3>Video con subtítulos <code>&lt;video&gt;</code> y <code>&lt;track&gt;</code></h3>
+                    <p>Incrusta reproductores de video con soporte para múltiples formatos, imagen de portada y pistas de subtítulos accesibles.</p>
+
+                    <div class="demo">
+                        <video controls width="640" height="360" preload="metadata"
+                            poster="assets/media/consejos-poster.jpg">
+                            <source src="assets/media/consejos.webm" type="video/webm">
+                            <source src="assets/media/consejos.mp4"  type="video/mp4">
+                            <track kind="subtitles" src="assets/media/consejos-es.vtt"
+                                srclang="es" label="Español" default>
+                            Tu navegador no reproduce video.
+                            <a href="assets/media/consejos.mp4">Descarga el video</a>.
+                        </video>
+                    </div>
+
+                    <pre><code>&lt;video controls width="640" height="360" preload="metadata"
+       poster="assets/media/consejos-poster.jpg"&gt;
+    &lt;source src="assets/media/consejos.webm" type="video/webm"&gt;
+    &lt;source src="assets/media/consejos.mp4"  type="video/mp4"&gt;
+    &lt;track kind="subtitles" src="assets/media/consejos-es.vtt"
+           srclang="es" label="Español" default&gt;
+    Tu navegador no reproduce video.
+    &lt;a href="assets/media/consejos.mp4"&gt;Descarga el video&lt;/a&gt;.
+&lt;/video&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Define siempre <code>width</code>, <code>height</code> y una imagen 
+                            <code>poster</code> para reservar el espacio visual antes de reproducir[cite: 5]. Incluye múltiples 
+                            formatos con <code>&lt;source&gt;</code> (como WebM y MP4) y añade pistas de subtítulos con 
+                            <code>&lt;track&gt;</code> para garantizar la accesibilidad.</p>
+                    </aside>
+
+                </article>
+
+            </section>
+
+            <section id="contenido-incrustrado">
+                <h2>Contenido incrustado</h2>
+
+                <article id="iframe-propio">
+                    <h3>Marco incrustado de página propia <code>&lt;iframe&gt;</code></h3>
+                    <p>Permite incrustar otra página HTML perteneciente al mismo sitio web dentro del documento actual.</p>
+
+                    <div class="demo">
+                        <iframe src="paginas/test.html"
+                            title="Página de prueba del sitio de ConSentidos"
+                            width="600" height="240" loading="lazy"></iframe>
+                    </div>
+
+                    <pre><code>&lt;iframe src="paginas/test.html"
+        title="Página de prueba del sitio de ConSentidos"
+        width="600" height="240" loading="lazy"&gt;&lt;/iframe&gt;</code></pre>
+
+                    <aside>
+                    <p><strong>Buena práctica:</strong> Incluye siempre un atributo <code>title</code> descriptivo porque es obligatorio para 
+                        que los lectores de pantalla identifiquen el contenido del marco. Además, define <code>width</code>, 
+                        <code>height</code> y <code>loading="lazy"</code> para reservar el espacio y diferir su carga hasta que sea visible.</p>
+                    </aside>
+
+                </article>
+
+                <article id="iframe-terceros">
+                    <h3>Marco incrustado de terceros <code>&lt;iframe&gt;</code></h3>
+                    <p>Incrusta contenido externo (como mapas o reproductores) aplicando restricciones de seguridad para proteger la página.</p>
+
+                    <div class="demo">
+                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-80.9950%2C8.0900%2C-80.9650%2C8.1100&amp;layer=mapnik"
+                                title="Mapa de Santiago de Veraguas, donde está la clínica"
+                                width="600" height="340" loading="lazy"
+                                referrerpolicy="no-referrer"
+                                sandbox="allow-scripts"></iframe>
+                    </div>
+
+                    <pre><code>&lt;iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-
+80.9950%2C8.0900%2C-80.9650%2C8.1100&amp;amp;layer=mapnik"
+        title="Mapa de Santiago de Veraguas, donde está la clínica"
+        width="600" height="340" loading="lazy"
+        referrerpolicy="no-referrer"
+        sandbox="allow-scripts"&gt;&lt;/iframe&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica y seguridad:</strong> En contenido de terceros, usa <code>referrerpolicy="no-referrer"</code> 
+                            para no enviar la dirección de tu página al sitio incrustado y restringe permisos con <code>sandbox</code> habilitando 
+                            solo lo indispensable (como <code>allow-scripts</code>). Nunca combines <code>allow-scripts</code> con
+                            <code>allow-same-origin</code> en contenido ajeno, ya que juntos anulan el aislamiento de seguridad.
+                        </p>
+                    </aside>
+
+                </article>
+
+                <article id="objeto-incrustado">
+                    <h3>Documento incrustado <code>&lt;object&gt;</code></h3>
+                    <p>Incrusta documentos externos como archivos PDF directamente en la página, incluyendo contenido alternativo en su 
+                        interior.</p>
+
+                    <div class="demo">
+                        <object data="assets/docs/guia-vacunacion.pdf"
+                                type="application/pdf" width="600" height="400"
+                                aria-label="Guía de vacunación de ConSentidos, en PDF">
+                            <p>Tu navegador no muestra PDF.
+                                <a>Descarga la guía</a>. (Link de muestra)</p>
+                        </object>
+                    </div>
+
+                    <pre><code>&lt;object data="assets/docs/guia-vacunacion.pdf"
+        type="application/pdf" width="600" height="400"
+        aria-label="Guía de vacunación de ConSentidos, en PDF"&gt;
+    &lt;p&gt;Tu navegador no muestra PDF.
+        &lt;a href="assets/docs/guia-vacunacion.pdf"&gt;Descarga la guía&lt;/a&gt;.&lt;/p&gt;
+&lt;/object&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Especifica siempre el tipo de archivo en <code>type</code> 
+                            (<code>application/pdf</code>), define <code>width</code> y <code>height</code> para evitar saltos visuales, 
+                            e incluye un enlace de descarga alternativo dentro de <code>&lt;object&gt;</code> para navegadores que no 
+                            puedan renderizar el PDF.</p>
+                    </aside>
+                </article>
+            </section>
+
+            <section id="interactivos">
+                <h2>Elementos interactivos</h2>
+
+                <article id="acordeon">
+                    <h3>Preguntas frecuentes / Acordeón <code>&lt;details&gt;</code> y <code>&lt;summary&gt;</code></h3>
+                    <p>Permiten crear bloques de contenido desplegables de forma nativa sin necesidad de escribir JavaScript.</p>
+
+                    <div class="demo">
+                        <details name="preguntas">
+                            <summary>¿Cada cuánto debo desparasitar a mi perro?</summary>
+                            <p>Cada tres meses, con la dosis que indique el veterinario.</p>
+                        </details>
+
+                        <details name="preguntas">
+                            <summary>¿Necesito cita para vacunar?</summary>
+                            <p>Sí. Así preparamos la vacuna y revisamos antes su carné.</p>
+                        </details>
+                    </div>
+
+                    <pre><code>&lt;details name="preguntas"&gt;
+    &lt;summary&gt;¿Cada cuánto debo desparasitar a mi perro?&lt;/summary&gt;
+    &lt;p&gt;Cada tres meses, con la dosis que indique el veterinario.&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;details name="preguntas"&gt;
+    &lt;summary&gt;¿Necesito cita para vacunar?&lt;/summary&gt;
+    &lt;p&gt;Sí. Así preparamos la vacuna y revisamos antes su carné.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Asigna el mismo atributo <code>name</code> a varios elementos 
+                            <code>&lt;details&gt;</code> relacionados para convertirlos en un acordeón exclusivo donde abrir 
+                            uno cierra automáticamente los demás. Usa siempre un <code>&lt;summary&gt;</code> claro y descriptivo 
+                            como primer hijo.</p>
+                    </aside>
+
+                </article>
+
+                <article id="medidor">
+                    <h3>Medidor de rango <code>&lt;meter&gt;</code></h3>
+                    <p>Representa una medida escalar dentro de un rango conocido, como el peso saludable de una mascota frente a 
+                        valores mínimos, máximos y óptimos.</p>
+
+                    <div class="demo">
+                        <p>
+                            <label for="peso-luna">Peso de Luna</label>
+                            <meter id="peso-luna" min="0" max="8" low="3" high="5"
+                                optimum="4" value="4.2">4,2 kg</meter>
+                            4,2 kg (rango saludable: 3 a 5 kg)
+                        </p>
+                    </div>
+
+                    <pre><code>&lt;p&gt;
+    &lt;label for="peso-luna"&gt;Peso de Luna&lt;/label&gt;
+    &lt;meter id="peso-luna" min="0" max="8" low="3" high="5"
+           optimum="4" value="4.2"&gt;4,2 kg&lt;/meter&gt;
+    4,2 kg (rango saludable: 3 a 5 kg)
+&lt;/p&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Reserva <code>&lt;meter&gt;</code> exclusivamente para magnitudes dentro 
+                            de un rango conocido (never para el avance de una tarea). Define los umbrales <code>low</code>, 
+                            <code>high</code> y <code>optimum</code> para que el navegador aplique automáticamente el código de color 
+                            semántico, y asócialo siempre a un <code>&lt;label&gt;</code>.</p>
+                    </aside>
+                </article>
+
+                <article id="progreso">
+                    <h3>Barra de progreso <code>&lt;progress&gt;</code> y <code>&lt;output&gt;</code></h3>
+                    <p>Muestra el avance de una tarea que tiene un inicio y un final definidos, acompañado de su salida textual y 
+                        botones de control.</p>
+
+                    <div class="demo">
+                        <p>
+                            <label for="plan-vacunas">Plan de vacunación de Max</label>
+                            <progress id="plan-vacunas" value="2" max="5">2 de 5 dosis</progress>
+                            <output id="plan-texto" for="plan-vacunas">2 de 5 dosis</output>
+                        </p>
+
+                        <button type="button" id="btn-dosis">Registrar una dosis</button>
+                        <button type="button" id="btn-reiniciar" hidden>Reiniciar el plan</button>
+                    </div>
+
+                    <pre><code>&lt;p&gt;
+    &lt;label for="plan-vacunas"&gt;Plan de vacunación de Max&lt;/label&gt;
+    &lt;progress id="plan-vacunas" value="2" max="5"&gt;2 de 5 dosis&lt;/progress&gt;
+    &lt;output id="plan-texto" for="plan-vacunas"&gt;2 de 5 dosis&lt;/output&gt;
+&lt;/p&gt;
+
+&lt;button type="button" id="btn-dosis"&gt;Registrar una dosis&lt;/button&gt;
+&lt;button type="button" id="btn-reiniciar" hidden&gt;Reiniciar el plan&lt;/button&gt;</code></pre>
+
+                    <aside>
+                        <p><strong>Buena práctica:</strong> Utiliza <code>&lt;progress&gt;</code> únicamente para representar el grado 
+                            de finalización de un proceso (como dosis aplicadas o carga de archivos). Incluye texto alternativo dentro 
+                            de la etiqueta para lectores de pantalla y vincula el elemento <code>&lt;output&gt;</code> mediante el 
+                            atributo <code>for</code>.</p>
+                    </aside>
+
+                </article>
+
+            </section>
+    </main>
+
+    <aside>
+        <h2>Horario de atención</h2>
+        <p>
+            Lunes a viernes: 8:00 a.m. a 6:00 p.m.<br>
+            Sábados: 8:00 a.m. a 12:00 m.<br>
+            Urgencias: las 24 horas por teléfono.
+        </p>
+    </aside>
+
+    <footer>
+        <address>
+            <strong>Clínica Veterinaria ConSentidos</strong><br>
+            Avenida Central, Santiago de Veraguas, Panamá<br>
+            <a href="tel:+5079980000">+507 998-0000</a>
+            <a href="mailto:citas@consentidos.example">citas@consentidos.example</a>
+        </address>
+
+        <p>
+            Ultima actualización:
+            <time datetime="2026-10-22">15 de noviembre de 2026</time>.
+        </p>
+
+        <p><a href="#inicio">Volver arriba</a></p>
+
+        <p>
+            <small>
+                &copy; 2026 Clínica Veterinaria ConSentidos. Proyecto académico del 
+                curso Desarrollo de Software V, Universidad Tecnológica de Panamá,
+                Centro Regional de Veraguas. 
+            </small>
+        </p>
+    </footer>
+</body>
+
+</html> 
+
+
+
